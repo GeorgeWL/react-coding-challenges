@@ -28,9 +28,9 @@ export default class Discover extends Component {
       console.error(err);
     });
     console.log({ responseCategories });
-    const newReleases = responseNewReleases?.data;
-    const newPlaylists = responsePlaylists?.data;
-    const categories = responseCategories?.data;
+    const newReleases = responseNewReleases?.data?.albums?.items;
+    const newPlaylists = responsePlaylists?.data?.playlists?.items;
+    const categories = responseCategories?.data?.categories?.items;
     console.log({
       newReleases,
       newPlaylists,
